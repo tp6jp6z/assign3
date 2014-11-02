@@ -88,8 +88,8 @@ void draw(){
 
 int countNeighborBombs(int col,int row){
   // -------------- Requirement B ---------
-  col= (mouseX-ix)/SLOT_SIZE;
-  row= (mouseY-iy)/SLOT_SIZE;
+  col= int((mouseX-ix)/SLOT_SIZE);
+  row= int((mouseY-iy)/SLOT_SIZE);
   
   return 0;
 }
@@ -191,8 +191,8 @@ void mousePressed(){
        mouseY >= iy && mouseY <= iy+sideLength){
     
     // --------------- put you code here -------
-       int col= (mouseX-ix)/SLOT_SIZE;
-       int row= (mouseY-iy)/SLOT_SIZE;
+       int col= int((mouseX-ix)/SLOT_SIZE);
+       int row= int((mouseY-iy)/SLOT_SIZE);
     
        if (mouseButton== RIGHT){
            showSlot(col, row, SLOT_FLAG);
